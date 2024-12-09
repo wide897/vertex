@@ -1,0 +1,356 @@
+.touristvisa-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.touristvisa-top-bar {
+  background: linear-gradient(
+    to right,
+    var(--secondary-blue),
+    var(--primary-blue)
+  );
+  padding: 8px 0;
+  color: #fff;
+  font-size: 13px;
+  z-index: 1000;
+}
+
+.touristvisa-top-bar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.touristvisa-contact-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.touristvisa-contact-info a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.touristvisa-social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.touristvisa-social-links a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.touristvisa-highlight {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 3px 10px;
+  border-radius: 3px;
+}
+
+/* Navbar Styles */
+.touristvisa-navbar {
+  background-color: transparent !important;
+  position: absolute;
+  width: 100%;
+  z-index: 1000;
+  padding: 1rem 0;
+  transition: var(--transition);
+}
+
+.touristvisa-navbar.scrolled {
+  background-color: #fff !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+}
+
+.touristvisa-navbar-brand img {
+  height: 45px;
+}
+
+.touristvisa-nav-link {
+  color: #fff !important;
+  font-weight: 500;
+  padding: 0.5rem 1rem !important;
+  transition: var(--transition);
+}
+
+.scrolled .touristvisa-nav-link {
+  color: #333 !important;
+}
+
+/* Enhanced Hero Section */
+.touristvisa-hero {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../assets/Study Visa.jpg") no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 80px;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.touristvisa-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.touristvisa-hero-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.touristvisa-hero-box {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 1.5rem;
+  max-width: 600px;
+  transform: translateY(50px);
+  opacity: 0;
+  animation: slideUp 1s forwards 0.5s;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.touristvisa-hero h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+  animation: fadeIn 1s forwards;
+}
+
+.touristvisa-hero p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  animation: fadeIn 1s forwards 0.3s;
+}
+
+/* Grid and Card Styles */
+.touristvisa-comparison-grid {
+  width: 100%;
+}
+
+.touristvisa-grid-sizer,
+.touristvisa-country-card {
+  width: calc(33.333% - 20px);
+}
+
+.touristvisa-gutter-sizer {
+  width: 30px;
+}
+
+.touristvisa-country-card {
+  background: white;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+  margin-bottom: 30px;
+  height: 750px;
+  display: flex;
+  flex-direction: column;
+}
+
+.touristvisa-country-header {
+  position: relative;
+  padding: 30px;
+  background: linear-gradient(45deg, var(--primary-blue), var(--accent-blue));
+  color: white;
+  flex-shrink: 0;
+}
+
+.touristvisa-country-flag {
+  position: absolute;
+  top: -15px;
+  right: 20px;
+  font-size: 3em;
+  filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.2));
+}
+
+.touristvisa-country-content {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.touristvisa-info-section {
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.touristvisa-info-section h3 {
+  color: var(--primary-blue);
+  margin-bottom: 20px;
+  font-size: 1.3em;
+  display: flex;
+  align-items: center;
+}
+
+.touristvisa-requirements-list,
+.touristvisa-work-rights-list {
+  list-style: none;
+  padding: 0;
+}
+
+.touristvisa-requirements-list li,
+.touristvisa-work-rights-list li {
+  padding: 12px 15px 12px 35px;
+  margin: 10px 0;
+  background: #f8f9fa;
+  border-radius: 8px;
+  position: relative;
+  transition: var(--transition);
+}
+
+.touristvisa-stats-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  padding: 20px;
+  background: #f8f9fa;
+  margin: 0;
+  border-radius: 0;
+}
+
+.touristvisa-action-buttons {
+  margin-top: auto;
+  padding: 20px;
+  border-top: 1px solid #eee;
+}
+
+.touristvisa-cta-button,
+.touristvisa-know-more-btn {
+  background: var(--primary-blue);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 40px;
+  font-weight: 600;
+  border: none;
+  transition: var(--transition);
+  text-decoration: none;
+  display: inline-block;
+}
+
+.touristvisa-cta-button:hover,
+.touristvisa-know-more-btn:hover {
+  background: var(--secondary-blue);
+  transform: translateY(-2px);
+  color: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .touristvisa-grid-sizer,
+  .touristvisa-country-card {
+    width: calc(50% - 15px);
+  }
+}
+
+@media (max-width: 768px) {
+  .touristvisa-grid-sizer,
+  .touristvisa-country-card {
+    width: 100%;
+  }
+
+  .touristvisa-hero h1 {
+    font-size: 2rem;
+  }
+
+  .touristvisa-top-bar {
+    display: none;
+  }
+
+  .touristvisa-navbar-toggler {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+
+  .touristvisa-navbar-collapse {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+}
+
+.touristvisa-whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.touristvisa-whatsapp-float:hover {
+  text-decoration: none;
+  color: #fff;
+  background-color: #128c7e;
+  transform: translateY(-3px);
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Remove the margin-top from i element */
+.touristvisa-whatsapp-float i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 767px) {
+  .touristvisa-whatsapp-float {
+    width: 50px;
+    height: 50px;
+    right: 20px;
+    bottom: 20px;
+    font-size: 25px;
+  }
+}

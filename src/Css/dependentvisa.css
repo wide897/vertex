@@ -1,0 +1,374 @@
+:root {
+  --primary-blue: #002654;
+  --secondary-blue: #169b62;
+  --accent-blue: #1e88e5;
+  --light-gray: #f5f7fa;
+  --border-radius: 15px;
+  --transition: all 0.3s ease;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  overflow-x: hidden;
+  background-color: var(--light-gray);
+  line-height: 1.6;
+}
+
+.dependentvisa-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Top Bar Styles */
+.dependentvisa-top-bar {
+  background: linear-gradient(
+    to right,
+    var(--secondary-blue),
+    var(--primary-blue)
+  );
+  padding: 8px 0;
+  color: #fff;
+  font-size: 13px;
+  z-index: 1000;
+}
+
+.dependentvisa-top-bar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.dependentvisa-contact-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.dependentvisa-contact-info a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.dependentvisa-social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.dependentvisa-social-links a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.dependentvisa-highlight {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 3px 10px;
+  border-radius: 3px;
+}
+
+/* Navbar Styles */
+.dependentvisa-navbar {
+  background-color: transparent !important;
+  position: absolute;
+  width: 100%;
+  z-index: 1000;
+  padding: 1rem 0;
+  transition: var(--transition);
+}
+
+.dependentvisa-navbar.scrolled {
+  background-color: #fff !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+}
+
+.dependentvisa-navbar-brand img {
+  height: 45px;
+}
+
+.dependentvisa-nav-link {
+  color: #fff !important;
+  font-weight: 500;
+  padding: 0.5rem 1rem !important;
+  transition: var(--transition);
+}
+
+.scrolled .dependentvisa-nav-link {
+  color: #333 !important;
+}
+
+/* Enhanced Hero Section */
+.dependentvisa-hero {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../assets/Study Visa.jpg") no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 80px;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.dependentvisa-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.dependentvisa-hero-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.dependentvisa-hero-box {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 1.5rem;
+  max-width: 600px;
+  transform: translateY(50px);
+  opacity: 0;
+  animation: slideUp 1s forwards 0.5s;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.dependentvisa-hero h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+  animation: fadeIn 1s forwards;
+}
+
+.dependentvisa-hero p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  animation: fadeIn 1s forwards 0.3s;
+}
+
+/* Grid and Card Styles */
+.dependentvisa-comparison-grid {
+  width: 100%;
+}
+
+.dependentvisa-grid-sizer,
+.dependentvisa-country-card {
+  width: calc(33.333% - 20px);
+}
+
+.dependentvisa-gutter-sizer {
+  width: 30px;
+}
+
+.dependentvisa-country-card {
+  background: white;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+  margin-bottom: 30px;
+  height: 750px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dependentvisa-country-header {
+  position: relative;
+  padding: 30px;
+  background: linear-gradient(45deg, var(--primary-blue), var(--accent-blue));
+  color: white;
+  flex-shrink: 0;
+}
+
+.dependentvisa-country-flag {
+  position: absolute;
+  top: -15px;
+  right: 20px;
+  font-size: 3em;
+  filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.2));
+}
+
+.dependentvisa-country-content {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.dependentvisa-info-section {
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.dependentvisa-info-section h3 {
+  color: var(--primary-blue);
+  margin-bottom: 20px;
+  font-size: 1.3em;
+  display: flex;
+  align-items: center;
+}
+
+.dependentvisa-requirements-list,
+.dependentvisa-work-rights-list {
+  list-style: none;
+  padding: 0;
+}
+
+.dependentvisa-requirements-list li,
+.dependentvisa-work-rights-list li {
+  padding: 12px 15px 12px 35px;
+  margin: 10px 0;
+  background: #f8f9fa;
+  border-radius: 8px;
+  position: relative;
+  transition: var(--transition);
+}
+
+.dependentvisa-stats-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  padding: 20px;
+  background: #f8f9fa;
+  margin: 0;
+  border-radius: 0;
+}
+
+.dependentvisa-action-buttons {
+  margin-top: auto;
+  padding: 20px;
+  border-top: 1px solid #eee;
+}
+
+.dependentvisa-cta-button,
+.dependentvisa-know-more-btn {
+  background: var(--primary-blue);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 40px;
+  font-weight: 600;
+  border: none;
+  transition: var(--transition);
+  text-decoration: none;
+  display: inline-block;
+}
+
+.dependentvisa-cta-button:hover,
+.dependentvisa-know-more-btn:hover {
+  background: var(--secondary-blue);
+  transform: translateY(-2px);
+  color: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .dependentvisa-grid-sizer,
+  .dependentvisa-country-card {
+    width: calc(50% - 15px);
+  }
+}
+
+@media (max-width: 768px) {
+  .dependentvisa-grid-sizer,
+  .dependentvisa-country-card {
+    width: 100%;
+  }
+
+  .dependentvisa-hero h1 {
+    font-size: 2rem;
+  }
+
+  .dependentvisa-top-bar {
+    display: none;
+  }
+
+  .dependentvisa-navbar-toggler {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+
+  .dependentvisa-navbar-collapse {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+}
+
+.dependentvisa-whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.dependentvisa-whatsapp-float:hover {
+  text-decoration: none;
+  color: #fff;
+  background-color: #128c7e;
+  transform: translateY(-3px);
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Remove the margin-top from i element */
+.dependentvisa-whatsapp-float i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 767px) {
+  .dependentvisa-whatsapp-float {
+    width: 50px;
+    height: 50px;
+    right: 20px;
+    bottom: 20px;
+    font-size: 25px;
+  }
+}

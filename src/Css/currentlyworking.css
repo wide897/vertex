@@ -1,0 +1,80 @@
+.currently-working-hero {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../assets/home.jpg") no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 80px;
+  overflow: hidden;
+}
+
+.currently-working-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("https://i.postimg.cc/K8WybH3D/particles.svg") repeat;
+  opacity: 0.1;
+  pointer-events: none;
+}
+.currently-working-hero-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.currently-working-hero-box {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 1.5rem;
+  max-width: 600px;
+  transform: translateY(50px);
+  opacity: 0;
+  animation: slideUp 1s forwards 0.5s;
+}
+
+@media (max-width: 992px) {
+  .currently-working-hero h1 {
+    font-size: 2rem;
+  }
+
+  .currently-working-hero-box {
+    padding: 1.5rem;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .currently-working-hero h1 {
+    font-size: 1.75rem;
+  }
+
+  .currently-working-hero p {
+    font-size: 0.9rem;
+  }
+
+  .currently-working-cta-button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+  .hero h1 {
+    font-size: 2.25rem;
+  }
+
+  .hero-box {
+    max-width: 80%;
+  }
+}
